@@ -5,16 +5,19 @@ kredit_b.innerHTML = 200
 bet_b.innerHTML = 0
 winner_paid_b.innerHTML = "-"
 
-function bet(){
+function bet()
+{
     let kredit = parseInt(kredit_b.innerHTML)
     let bet = document.getElementById("betinput").value
-    
+    let bet_b2 = bet_b.innerHTML
     if(bet <= kredit)
         {
-            bet_b.innerHTML = bet
+            //bet_b.innerHTML =+ bet_b2
+            bet_b.innerHTML = parseInt(bet) + parseInt(bet_b2)
             kredit_b.innerHTML = kredit - bet
         }
-    else {
+    else
+    {
         alert("Nincs elég kredited!")
     }
 }
